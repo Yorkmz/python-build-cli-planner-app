@@ -2,6 +2,9 @@ from src.database import add_reminder, list_reminders
 from src.reminder import PoliteReminder
 from src.external_reminders import EveningReminder
 from src.deadlined_reminders import DeadlinedReminder
+
+DeadlinedReminder.register(PoliteReminder)
+
 def handle_input():
     choice = input("Choice: ")
     if choice == "3":
